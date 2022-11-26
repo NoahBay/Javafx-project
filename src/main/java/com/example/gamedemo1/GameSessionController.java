@@ -33,6 +33,10 @@ public class GameSessionController {
     private Label InformationLabel;
     @FXML
     private RadioButton rButton1, rButton2, rButton3, rButton4, rButton5, rButton6, rButton7;
+
+    @FXML
+    public Button helpBtn;
+
     @FXML
     Button BackButton;
     @FXML
@@ -49,11 +53,11 @@ public class GameSessionController {
         // Setting the stage, scene and roots.
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("MainMenuScene.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root, 900, 600);
         stage.setScene(scene);
         stage.show();
         stage.centerOnScreen();
-        stage.setFullScreen(true);
+        //stage.setFullScreen(false);
 
         // Getting the name from the user input.
         player.name = nameContainer.getText();
@@ -62,7 +66,7 @@ public class GameSessionController {
     public void informationScene(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("InformationScene.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root, 900, 600);
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
@@ -103,34 +107,42 @@ public class GameSessionController {
     public void mainMenu(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenuScene.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root, 900, 600);
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
     }
 
-    public void HelpScene(ActionEvent event) throws IOException{
+    /*public void HelpScene(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass()).getResource("MainMenuHelp.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
+    }*/
+
+    public void HelpScene(){
+        helpBtn.setOnAction(e -> HelpStage.Display("Click on a button to get information or get questions"));
     }
 
+
+
     public void HelpSceneInformation(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("InformationHelp.fxml"));
+        /*Parent root = FXMLLoader.load(getClass().getResource("InformationHelp.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root, 900, 600 );
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);
+         */
+        helpBtn.setOnAction(e -> HelpStage.Display("Click on a button to get information. When you're ready, go back and answer some questions"));
     }
 
     public void gameScene(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("WorldMap.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root, 900, 600);
         stage.setScene(scene);
         stage.show();
 
@@ -154,7 +166,7 @@ public class GameSessionController {
     public void USA(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("USA.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root, 900, 600);
         stage.setScene(scene);
         stage.show();
         stage.setResizable(false);

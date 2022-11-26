@@ -15,12 +15,12 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("StartScene.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
+        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         stage.setTitle("World of Skovbrand");
         stage.setScene(scene);
         stage.show();
         stage.centerOnScreen();
-        stage.setFullScreen(true);
+        //stage.setFullScreen(false);
     }
 
     public static void main(String[] args) {

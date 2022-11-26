@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamedemo1.GameSessionController">
+   <children>
+      <Button layoutX="549.0" layoutY="14.0" mnemonicParsing="false" onAction="#HelpSceneInformation" text="?">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="rButton1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#getInformation" text="Information 1">
+         <toggleGroup>
+            <ToggleGroup fx:id="Informaiton" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rButton2" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#getInformation" text="Information 2" toggleGroup="$Informaiton" />
+      <RadioButton fx:id="rButton3" layoutX="10.0" layoutY="110.0" mnemonicParsing="false" onAction="#getInformation" text="Information 3" toggleGroup="$Informaiton" />
+      <RadioButton fx:id="rButton4" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#getInformation" text="Information 4" toggleGroup="$Informaiton" />
+      <RadioButton fx:id="rButton5" layoutX="10.0" layoutY="210.0" mnemonicParsing="false" onAction="#getInformation" text="Information 5" toggleGroup="$Informaiton" />
+      <RadioButton fx:id="rButton6" alignment="CENTER_LEFT" layoutX="10.0" layoutY="260.0" mnemonicParsing="false" onAction="#getInformation" text="Information 6" toggleGroup="$Informaiton" />
+      <RadioButton fx:id="rButton7" layoutX="10.0" layoutY="310.0" mnemonicParsing="false" onAction="#getInformation" text="Information 7" toggleGroup="$Informaiton" />
+      <Button fx:id="BackButton" layoutX="7.0" layoutY="353.0" mnemonicParsing="false" onAction="#mainMenu" text="Tilbage til menuen" />
+      <Label fx:id="InformationLabel" alignment="TOP_LEFT" layoutX="150.0" layoutY="60.0" prefHeight="322.0" prefWidth="419.0" text="Vælg hvilken information du vil læse om" wrapText="true" />
+   </children>
+</AnchorPane>

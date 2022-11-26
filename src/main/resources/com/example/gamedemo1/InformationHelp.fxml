@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gamedemo1.HelpSceneController">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="9.0" layoutY="14.0" prefHeight="219.0" prefWidth="580.0" text="Du er nu gået ind i information menuen. Her kan du læse om mange forskellige punkter inde for skovbrande. Læs og forstå for at få en høj score i spillet." wrapText="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="210.0" layoutY="282.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Tilbage til menuen">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
